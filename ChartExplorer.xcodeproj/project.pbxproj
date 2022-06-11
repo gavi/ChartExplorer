@@ -14,6 +14,7 @@
 		563EB0272854ED71003C78F5 /* ChartExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563EB0262854ED71003C78F5 /* ChartExplorerTests.swift */; };
 		563EB0312854ED71003C78F5 /* ChartExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563EB0302854ED71003C78F5 /* ChartExplorerUITests.swift */; };
 		563EB0332854ED71003C78F5 /* ChartExplorerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563EB0322854ED71003C78F5 /* ChartExplorerUITestsLaunchTests.swift */; };
+		563EB0402854EF86003C78F5 /* BarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563EB03F2854EF86003C78F5 /* BarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		563EB02C2854ED71003C78F5 /* ChartExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChartExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		563EB0302854ED71003C78F5 /* ChartExplorerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExplorerUITests.swift; sourceTree = "<group>"; };
 		563EB0322854ED71003C78F5 /* ChartExplorerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExplorerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		563EB03F2854EF86003C78F5 /* BarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				563EB0182854ED71003C78F5 /* Assets.xcassets */,
 				563EB01A2854ED71003C78F5 /* ChartExplorer.entitlements */,
 				563EB01B2854ED71003C78F5 /* Preview Content */,
+				563EB03F2854EF86003C78F5 /* BarView.swift */,
 			);
 			path = ChartExplorer;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563EB0402854EF86003C78F5 /* BarView.swift in Sources */,
 				563EB0172854ED70003C78F5 /* ContentView.swift in Sources */,
 				563EB0152854ED70003C78F5 /* ChartExplorerApp.swift in Sources */,
 			);
