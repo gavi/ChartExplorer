@@ -12,7 +12,6 @@ struct BarView:View{
     let data = [("New York",900),("Pittsburgh",600), ("Chicago",1200)]
     var body: some View{
         VStack{
-            Text("Bar Chart").bold()
             Chart(data,id:\.self.0){ item in
                 BarMark(
                     x:.value("City", item.0),
@@ -20,7 +19,7 @@ struct BarView:View{
                     
                 )
             }
-        }
+        }.navigationTitle("Bar Chart")
     }
 }
 

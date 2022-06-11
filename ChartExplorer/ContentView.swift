@@ -29,6 +29,12 @@ struct ContentView: View {
             label:{
                 Text("Line")
             }
+                NavigationLink{
+                    CompositeView()
+                }
+            label:{
+                Text("Composite")
+            }
             }.navigationTitle("Chart Types")
         }
     }

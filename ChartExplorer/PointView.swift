@@ -24,11 +24,10 @@ struct PointView:View{
 
     var body: some View{
         VStack{
-            Text("Point View").bold()
             Chart(data,id:\.self.0){item in
                 PointMark(x: .value(item.0, item.1), y: .value(item.0, item.2))
             }
-        }
+        }.navigationTitle("Point View")
     }
 }
 

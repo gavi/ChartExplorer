@@ -17,11 +17,10 @@ struct LineView:View{
     }
     var body: some View{
         VStack{
-            Text("Line Chart").bold()
             Chart(data,id:\.0){item in
                 LineMark(x: .value("key", item.0), y: .value("val", item.1))
             }
-        }
+        }.navigationTitle("Line Chart")
         
     }
 }
