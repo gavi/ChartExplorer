@@ -17,6 +17,12 @@ struct ContentView: View {
             label:{
                 Text("Bar Chart")
             }
+                NavigationLink{
+                    PointView()
+                }
+            label:{
+                Text("Point Chart")
+            }
             }.navigationTitle("Chart Types")
         }
     }
