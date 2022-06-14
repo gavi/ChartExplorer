@@ -9,17 +9,39 @@ import SwiftUI
 import Charts
 
 struct BarView:View{
-    let data = [("New York",900),("Pittsburgh",600), ("Chicago",1200)]
+    @State var data:[(String, Int)]
+    init(){
+        data = [("New York",900),("Pittsburgh",600), ("Chicago",1200)]
+    }
     var body: some View{
-        VStack{
-            Chart(data,id:\.self.0){ item in
-                BarMark(
-                    x:.value("City", item.0),
-                    y:.value("Sales", item.1)
-                    
-                )
+                ScrollView{
+
+                Chart(data,id:\.self.0){ item in
+                    BarMark(
+                        x:.value("City", item.0),
+                        y:.value("Sales", item.1)
+                        
+                    )
+                } .chartOverlay { proxy in
+                    GeometryReader { nthGeoItem in
+                        Rectangle().fill(.clear).contentShape(Rectangle())
+                            .gesture(DragGesture()
+                                .onChanged { value in
+                                    // Find the x-coordinates in the chart’s plot area.
+                                    let xStart = value.startLocation.x - nthGeoItem[proxy.plotAreaFrame].origin.x
+                                    let xCurrent = value.location.x - nthGeoItem[proxy.plotAreaFrame].origin.x
+                                    // Find the date values at the x-coordinates.
+                                    print("\(xStart),\(xCurrent)")
+                                    //data.append(("x\(Int.random(in: 0...1000))",Int.random(in: 0...1000)))
+                                }
+                                .onEnded { _ in  } // Clear the state on gesture end.
+                            )
+                    }
+                }
+                .frame(width: 500, height: 500)
             }
-        }.navigationTitle("Bar Chart")
+                .navigationTitle("Bar Chart")
+                .frame(width:300)
     }
 }
 

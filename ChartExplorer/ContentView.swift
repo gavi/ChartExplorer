@@ -12,29 +12,35 @@ struct ContentView: View {
         NavigationView{
             List{
                 NavigationLink{
-                    BarView()
+                        BarView()
+                    }
+                label:{
+                    Text("Bar")
                 }
-            label:{
-                Text("Bar")
-            }
                 NavigationLink{
-                    PointView()
+                        PointView()
+                    }
+                label:{
+                    Text("Point")
                 }
-            label:{
-                Text("Point")
-            }
                 NavigationLink{
-                    LineView()
+                        LineView()
+                    }
+                label:{
+                    Text("Line")
                 }
-            label:{
-                Text("Line")
-            }
                 NavigationLink{
-                    CompositeView()
+                        CompositeView()
+                    }
+                label:{
+                    Text("Composite")
                 }
-            label:{
-                Text("Composite")
-            }
+                NavigationLink{
+                        AccelerometerView()
+                    }
+                label:{
+                    Text("Accelerometer")
+                }
             }.navigationTitle("Chart Types")
         }
     }
