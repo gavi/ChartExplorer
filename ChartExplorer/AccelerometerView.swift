@@ -25,17 +25,23 @@ struct AccelerometerView:View{
                     y = data.acceleration.y
                     z = data.acceleration.z
                     chartData.append((Date(),x,y,z))
+                    if(chartData.count > 50){
+                        chartData.removeFirst()
+                    }
 
                 }
             }
+            Text("X").bold().padding()
             Chart(chartData,id:\.self.0){ item in
                 LineMark(x:.value("Dt", item.dt ),y: .value("x", item.x))
                
             }
+            Text("Y").bold().padding()
             Chart(chartData,id:\.self.0){ item in
                 LineMark(x:.value("Dt", item.dt ),y: .value("y", item.y))
                
             }
+            Text("Z").bold().padding()
             Chart(chartData,id:\.self.0){ item in
                 LineMark(x:.value("Dt", item.dt ),y: .value("z", item.z))
                
